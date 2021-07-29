@@ -1,4 +1,11 @@
 /*
+
+--- POST SOLVING NOTES ---
+Modeled this problem in NP way
+Time complexity upper bound is probably O(n*4^n) but less in practice,
+especially for small matrices
+
+
 So how is the roomba different from shortest path?
 
 For a roomba, we want to make sure that every spot is cleaned.
@@ -135,38 +142,45 @@ const roombaNumSteps = (floor) => {
   }
 };
 
-/*
 // n = 4, count = 6
 console.log(roombaNumSteps([
   [0, 0],
   [0, 0]
-]));
+]), 'time complexity:', 4*3**4);
 
 // n = 6, count = 32 or 35
 console.log(roombaNumSteps([
   [0, 0],
   [0, 0],
   [0, 0]
-]));
+]), 'time complexity:', 6*4**6);
 
 // n = 9, count = 1089
 console.log(roombaNumSteps([
   [0, 0, 0],
   [0, 0, 0],
   [0, 0, 0]
-]));
+]), 'time complexity:', 9*4**9);
 
 // n = 12, count = 40041
 console.log(roombaNumSteps([
   [0, 0, 0, 0],
   [0, 0, 0, 0],
   [0, 0, 0, 0],
-]));
-*/
+]), 'time complexity:', 12*4**12);
 
-// get creative
+// n = 16, JS heap out of memory
+console.log(/*roombaNumSteps([
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0]
+]),*/ 'time complexity:', 16*4**16);
+
+/* get creative
 console.log(roombaNumSteps([
   [0, 0, 1],
   [0, 1, 1],
   [0, 0, 0]
 ]));
+*/
