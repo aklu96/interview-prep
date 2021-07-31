@@ -1,4 +1,9 @@
-// undirected graph implementation
+/**
+ * This is probably closest to the idea of "objects and pointers"
+ * let's learn about advanced algos and practice some problems to get a better feel for these
+*/
+
+// directed graph implementation
 class Graph {
   constructor() {
     this.nodes = {};
@@ -6,10 +11,10 @@ class Graph {
 
   // O(1)
   addNode(val) {
-    this.nodes[val] = [];
+    this.nodes[val] = new Set();
   }
 
-  // O(V^2)
+  // O(V)
   removeNode(val) {
     delete this.nodes[val];
     // must remove all edges to that node as well
@@ -19,26 +24,13 @@ class Graph {
   }
 
   // O(1)
-  // could change this to be directed
   addEdge(node1, node2) {
-    this.nodes[node1].push(node2);
-    this.nodes[node2].push(node1);
+    this.nodes[node1].add(node2);
   }
 
-  // O(V)
+  // O(1)
   removeEdge(node1, node2) {
-    const node1Nbrs = this.nodes[node1];
-    const node2Nbrs = this.nodes[node2];
-    for (let i = 0; i < node1Nbrs.length; i++) {
-      if (node1Nbrs[i] === node2) {
-        node1Nbrs.splice(i, 1);
-      }
-    }
-    for (let i = 0; i < node2Nbrs.length; i++) {
-      if (node2Nbrs[i] === node1) {
-        node2Nbrs.splice(i, 1);
-      }
-    }
+    this.nodes[node1].delete(node2);
   }
 }
 
