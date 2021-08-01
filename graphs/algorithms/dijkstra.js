@@ -39,6 +39,14 @@ class Graph {
   addEdge(i, j, weight) {
     this.nodes[i][j] = weight;
   }
+
+  /*
+  // undirected
+  addEdge(i, j, weight) {
+    this.nodes[i][j] = weight;
+    this.nodes[j][i] = weight;
+  }
+  */
 }
 
 const graph = new Graph(4, [[0, 1, 24], [0, 2, 3], [0, 3, 20], [2, 3, 12]]);
