@@ -1,6 +1,13 @@
+/**
+ * HEAP SORT
+ * TIME COMPLEXITY: O(n*log n)
+ * SPACE COMPLEXITY: O(1) if done in place, O(n) here
+ *
+ * Insert and remove root operations are O(log n) for a heap of size n
+ *
+*/
+
 const Heap = require('../../../javascript-data-structures/binaryHeap.js');
-
-
 
 const heapSort = (comparator, nums) => {
   const result = [];
