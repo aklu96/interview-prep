@@ -7,7 +7,7 @@
  *
 */
 
-const Heap = require('../../../javascript-data-structures/binaryHeap.js');
+const Heap = require('../../data-structures/binaryHeap.js');
 
 const heapSort = (comparator, nums) => {
   const result = [];

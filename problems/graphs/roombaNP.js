@@ -46,7 +46,7 @@ each node should also have an array of cleaned & uncleaned spots, number of step
 
 */
 
-const Queue = require('../../javascript-data-structures/queue.js');
+const Queue = require('../../data-structures/queue.js');
 
 const countDirty = (floor) => {
   const numSquares = floor.length * floor[0].length;

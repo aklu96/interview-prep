@@ -19,7 +19,7 @@ sol'n: BFS
 
 */
 
-const Queue = require('../../javascript-data-structures/queue.js');
+const Queue = require('../../data-structures/queue.js');
 
 const getVars = (nodeCoords, memo) => {
   const i = nodeCoords[0];
